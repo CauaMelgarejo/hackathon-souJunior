@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* =========================================
+   DESIGN TOKENS — SouJunior Landing Page
+   ========================================= */
+:root {
+  /* Brand Colors */
+  --color-brand-blue-deep: #0a1b6f;
+  --color-brand-blue-primary: #1a3cbe;
+  --color-brand-blue-medium: #2752e8;
+  --color-brand-blue-light: #3d6bff;
+  --color-brand-blue-bright: #5578ff;
+  --color-brand-yellow: #f5c800;
+  --color-brand-yellow-hover: #e6b800;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #0a1b6f 0%, #1a3cbe 40%, #2752e8 70%, #3d6bff 100%);
+  --gradient-hero-radial: radial-gradient(ellipse at 70% 50%, rgba(91, 120, 255, 0.3) 0%, transparent 60%);
+
+  /* Typography */
+  --font-heading: "Inter", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  /* Spacing scale */
+  --section-padding-x: clamp(1.5rem, 5vw, 6rem);
+  --section-padding-y: clamp(3rem, 8vh, 6rem);
+
+  /* Transition */
+  --transition-base: 200ms ease;
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   RESETS & BASE
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-brand-blue-deep);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   FOCUS STYLES (Accessibility)
+   ========================================= */
+:focus-visible {
+  outline: 2px solid var(--color-brand-yellow);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =========================================
+   TYPOGRAPHY UTILITIES
+   ========================================= */
+.text-hero-title {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-hero-body {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* =========================================
+   HERO BACKGROUND
+   ========================================= */
+.hero-gradient {
+  background: var(--gradient-hero);
+  position: relative;
+}
+
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero-radial);
+  pointer-events: none;
+}
+
+/* =========================================
+   BUTTON BASE STYLES
+   ========================================= */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-brand-yellow);
+  color: #1a1a2e;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--transition-smooth),
+    transform var(--transition-base),
+    box-shadow var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-yellow-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(245, 200, 0, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color var(--transition-smooth),
+    background-color var(--transition-smooth),
+    transform var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   SCROLLBAR (optional polish)
+   ========================================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1b6f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2752e8;
+  border-radius: 3px;
+}
