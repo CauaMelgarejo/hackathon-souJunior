@@ -1,41 +1,75 @@
-<<<<<<< HEAD
-# hackathon-souJunior
-Projeto desenvolvido para o Hackathon SouJunior, com o desafio de criar uma Landing Page moderna, criativa e persuasiva para fortalecer a campanha da SouJunior no Apoia.se.
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SouJunior Landing Page
 
-## Getting Started
+Projeto desenvolvido para o Hackathon SouJunior com o objetivo de criar uma landing page moderna, visualmente atrativa e persuasiva para fortalecer a presença da comunidade no Apoia.se e divulgar sua missão, impacto e canais oficiais.
 
-First, run the development server:
+## Descrição do projeto
+
+A aplicação apresenta uma estrutura de landing page para a SouJunior, com foco em:
+
+- comunicação clara da proposta da comunidade;
+- reforço da percepção de impacto social e profissional;
+- destaque para formas de apoio e participação;
+- links para canais oficiais, depoimentos e ações de engajamento;
+- experiência responsiva e moderna em dispositivos desktop e mobile.
+
+## Stack utilizada
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Recharts
+
+## Requisitos
+
+Antes de executar o projeto, certifique-se de ter instalado:
+
+- Node.js 20 ou superior
+- npm
+
+## Instruções de execução
+
+1. Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+cd hackathon
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse a aplicação no navegador:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Para gerar a build de produção:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Integrantes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Cauã Gonçalves Melgarejo — Desenvolvedor
+  - LinkedIn: https://www.linkedin.com/in/cau%C3%A3-gon%C3%A7lves-melgarejo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Ana Raupp
+  - LinkedIn: https://www.linkedin.com/in/ana-caroline-raupp-spiering/
 
-## Deploy on Vercel
+## Observação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 0cb201d (:tada: Commit inicial)
+Este projeto foi desenvolvido como parte de um hackathon e tem como foco apresentar a SouJunior de forma clara, acolhedora e com alto apelo visual para engajar pessoas e apoiadores.

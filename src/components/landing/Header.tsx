@@ -17,14 +17,14 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
   { label: "Impacto", href: "#impacto" },
   { label: "Como apoiar", href: "#como-apoiar" },
-  { label: "Apoiadores", href: "#apoiadores" },
-  { label: "Contato", href: "#contato" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Canais", href: "#canais" },
 ];
 
 const APOIA_SE_URL = "https://apoia.se/soujunior";
+const SOU_JUNIOR_SITE_URL = "https://www.soujunior.tech";
 
 // ─── Animations ──────────────────────────────────────────────────────────────
 
@@ -48,9 +48,11 @@ const mobileMenuVariants: Variants = {
 
 function Logo() {
   return (
-    <Link
-      href="#inicio"
-      aria-label="SouJunior — Voltar ao início"
+    <a
+      href={SOU_JUNIOR_SITE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="SouJunior — abrir site oficial"
       className="flex items-center gap-2 group"
     >
       <Image
@@ -61,7 +63,7 @@ function Logo() {
         priority
         className="h-9 w-auto transition-transform group-hover:scale-105"
       />
-    </Link>
+    </a>
   );
 }
 
@@ -74,10 +76,9 @@ function DesktopNav() {
         <Link
           key={link.label}
           href={link.href}
-          className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-200 relative group"
+          className="nav-link text-white/80 text-sm font-medium"
         >
           {link.label}
-          <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300 rounded-full" />
         </Link>
       ))}
     </nav>
@@ -150,7 +151,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 key={link.label}
                 href={link.href}
                 onClick={onClose}
-                className="text-white/80 hover:text-white hover:bg-white/8 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200"
+                className="text-white/80 hover:text-white hover:bg-white/8 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 transform hover:translate-x-1"
               >
                 {link.label}
               </a>

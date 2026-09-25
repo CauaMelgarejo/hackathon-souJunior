@@ -4,22 +4,26 @@
    DESIGN TOKENS — SouJunior Landing Page
    ========================================= */
 :root {
-  /* Brand Colors */
-  --color-brand-blue-deep: #0a1b6f;
-  --color-brand-blue-primary: #1a3cbe;
-  --color-brand-blue-medium: #2752e8;
-  --color-brand-blue-light: #3d6bff;
-  --color-brand-blue-bright: #5578ff;
-  --color-brand-yellow: #f5c800;
-  --color-brand-yellow-hover: #e6b800;
+  /* Brand Colors (New Palette) */
+  --color-brand-blue-primary: #3C7EF9; /* Primária */
+  --color-brand-blue-secondary: #0A1662; /* Secundária */
+  --color-brand-blue-deep: #0A1662; /* Usado no body bg */
+  --color-brand-blue-highlight: #0E14BF; /* Destaque */
+  --color-brand-neutral: #242731; /* Neutra */
+  --color-brand-base-white: #E7E8EA; /* Base White */
+  --color-brand-purple: #6366F1; /* Roxo */
+  --color-brand-cyan: #22D3EE; /* Ciano */
+  --color-brand-yellow: #FACC15; /* Amarelo destaque */
+  --color-brand-yellow-hover: #EAB308;
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #0a1b6f 0%, #1a3cbe 40%, #2752e8 70%, #3d6bff 100%);
-  --gradient-hero-radial: radial-gradient(ellipse at 70% 50%, rgba(91, 120, 255, 0.3) 0%, transparent 60%);
+  --gradient-hero: linear-gradient(135deg, #0E14BF 0%, #6366F1 100%); /* Azul -> Roxo */
+  --gradient-cyan: linear-gradient(135deg, #3C7EF9 0%, #22D3EE 100%); /* Azul -> Ciano */
+  --gradient-hero-radial: radial-gradient(ellipse at 70% 50%, rgba(99, 102, 241, 0.3) 0%, transparent 60%);
 
   /* Typography */
-  --font-heading: "Inter", "Segoe UI", sans-serif;
-  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-heading: "Funnel Display", sans-serif;
+  --font-body: "Funnel Sans", sans-serif;
 
   /* Spacing scale */
   --section-padding-x: clamp(1.5rem, 5vw, 6rem);
@@ -51,6 +55,10 @@ body {
   background-color: var(--color-brand-blue-deep);
   color: #fff;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-heading);
 }
 
 /* =========================================
@@ -92,6 +100,73 @@ body {
   inset: 0;
   background: var(--gradient-hero-radial);
   pointer-events: none;
+}
+
+/* =========================================
+   SMOOTH ANIMATIONS & TRANSITIONS
+   ========================================= */
+.section-reveal {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.soft-float {
+  animation: softFloat 6s ease-in-out infinite;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: rgba(250, 204, 21, 0.95);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.card-hover {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background-color 0.28s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
 }
 
 /* =========================================

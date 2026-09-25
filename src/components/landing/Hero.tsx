@@ -135,7 +135,7 @@ export default function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-heading"
-      className="relative min-h-screen flex flex-col"
+      className="relative min-h-screen flex flex-col section-reveal"
     >
       {/* Decorative orbs */}
       <div

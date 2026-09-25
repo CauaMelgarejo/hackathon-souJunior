@@ -166,11 +166,7 @@ export default function ImpactSection() {
       id="impacto"
       ref={ref}
       aria-labelledby="impact-heading"
-      className="relative overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, #0f1f7a 0%, #1a3cbe 35%, #2340cc 60%, #3a30d9 85%, #4a28e0 100%)",
-      }}
+      className="relative overflow-hidden bg-[#0E14BF]"
     >
       {/* Orb decorativo */}
       <div
@@ -250,7 +246,9 @@ export default function ImpactSection() {
             {/* CTA */}
             <motion.div variants={fadeUp}>
               <a
-                href="#impacto-detalhes"
+                href="https://www.soujunior.tech"
+                target="_blank"
+                rel="noopener noreferrer"
                 id="impact-cta"
                 className="btn-primary inline-flex text-sm px-6 py-3.5"
                 aria-label="Conheça mais sobre o impacto da SouJunior"

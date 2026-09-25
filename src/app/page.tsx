@@ -1,6 +1,11 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import ImpactSection from "@/components/landing/ImpactSection";
+import SupportDifferenceSection from "@/components/landing/SupportDifferenceSection";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import SupportCTASection from "@/components/landing/SupportCTASection";
+import OfficialChannelsSection from "@/components/landing/OfficialChannelsSection";
+import Footer from "@/components/landing/Footer";
 
 /**
  * Landing Page — SouJunior Hackathon
@@ -11,12 +16,12 @@ import ImpactSection from "@/components/landing/ImpactSection";
  * 3. O que torna única?       (a implementar)
  * 4. Impacto                  ✅
  * 5. Comunidade               (a implementar)
- * 6. Como o apoio faz diferença (a implementar)
- * 7. Depoimentos              (a implementar)
+ * 6. Como o apoio faz diferença ✅
+ * 7. Depoimentos              ✅
  * 8. FAQ                      (a implementar)
- * 9. CTA final                (a implementar)
- * 10. Canais oficiais         (a implementar)
- * 11. Footer                  (a implementar)
+ * 9. CTA final                ✅
+ * 10. Canais oficiais         ✅
+ * 11. Footer                  ✅
  */
 export default function LandingPage() {
   return (
@@ -39,23 +44,23 @@ export default function LandingPage() {
       {/* ── 5. Comunidade ── (a implementar) */}
       {/* <ComunidadeSection /> */}
 
-      {/* ── 6. Como o apoio faz a diferença ── (a implementar) */}
-      {/* <ComoApoiarSection /> */}
+      {/* ── 6. Como o apoio faz a diferença ── */}
+      <SupportDifferenceSection />
 
-      {/* ── 7. Depoimentos ── (a implementar) */}
-      {/* <DepoimentosSection /> */}
+      {/* ── 7. Depoimentos ── */}
+      <TestimonialsSection />
 
       {/* ── 8. FAQ ── (a implementar) */}
       {/* <FAQSection /> */}
 
-      {/* ── 9. CTA Final ── (a implementar) */}
-      {/* <CTAFinalSection /> */}
+      {/* ── 9. CTA Final ── */}
+      <SupportCTASection />
 
-      {/* ── 10. Canais Oficiais ── (a implementar) */}
-      {/* <CanaisOficiaisSection /> */}
+      {/* ── 10. Canais Oficiais ── */}
+      <OfficialChannelsSection />
 
-      {/* ── 11. Footer ── (a implementar) */}
-      {/* <Footer /> */}
+      {/* ── 11. Footer ── */}
+      <Footer />
     </main>
   );
 }
