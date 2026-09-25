@@ -6,7 +6,7 @@ import MascotsImage from "./MascotsImage";
 // ─── Constants ───────────────────────────────────────────────────────────────
 
 const APOIA_SE_URL = "https://apoia.se/soujunior";
-const COMMUNITY_URL = "https://soujunior.tech";
+const COMMUNITY_URL = "https://www.soujunior.tech/";
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 
@@ -164,19 +164,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              {/* Eyebrow badge */}
-              <motion.div variants={fadeUp}>
-                <span
-                  className="inline-flex items-center gap-2 bg-white/10 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full border border-white/15 backdrop-blur-sm"
-                  aria-label="Hackathon SouJunior"
-                >
-                  <span
-                    className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"
-                    aria-hidden="true"
-                  />
-                  Hackathon SouJunior
-                </span>
-              </motion.div>
+      
 
               {/* H1 — main heading */}
               <div id="hero-heading">

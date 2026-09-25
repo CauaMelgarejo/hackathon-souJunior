@@ -200,25 +200,7 @@ export default function ImpactSection() {
           {/* ── COLUNA ESQUERDA — Texto ───────────────────────────── */}
           <div className="flex flex-col gap-6">
 
-            {/* Eyebrow */}
-            <motion.div variants={fadeUp}>
-              <span
-                className="
-                  inline-flex items-center gap-2
-                  bg-white/10 text-white/90
-                  text-xs font-semibold
-                  px-4 py-1.5 rounded-full
-                  border border-white/15
-                  backdrop-blur-sm
-                "
-              >
-                <span
-                  className="w-1.5 h-1.5 rounded-full bg-emerald-400"
-                  aria-hidden="true"
-                />
-                Impacto real
-              </span>
-            </motion.div>
+          
 
             {/* H2 */}
             <motion.h2
